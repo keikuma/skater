@@ -171,9 +171,7 @@ class FeatureImportance(BaseGlobalInterpretation):
                                          "This could be due to:\n"
                                          "1) 0 or infinite divisions\n"
                                          "2) perturbed values == original values\n"
-                                         "3) feature is a constant\n"
-                                         "Please submit an issue here:\n"
-                                         "https://github.com/datascienceinc/Skater/issues"))
+                                         "3) feature is a constant\n"))
 
         importances = divide_zerosafe(importances, (np.ones(importances.shape[0]) * importances.sum()))
         return importances

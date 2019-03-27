@@ -152,7 +152,6 @@ class TestFeatureImportance(unittest.TestCase):
 
     def test_feature_importance_sampling(self):
         """
-        https://github.com/datascienceinc/Skater/issues/192
         We should be able to sample the data and use training labels.
         :return:
         """

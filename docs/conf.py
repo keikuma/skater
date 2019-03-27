@@ -75,7 +75,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'skater'
-copyright = u'2017, skater developers and contributors (MIT License)'
+copyright = u'2019 Oracle, UPL License'
 author = u'Author'
 
 # The version info for the project you're documenting, acts as replacement for

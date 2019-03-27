@@ -325,10 +325,7 @@ class DataManager(object):
             idx = self.feature_ids.index(i)
             return self.X[:, idx]
         else:
-            raise(ValueError("Unrecongized index type: {}. This should not happen, "
-                             "submit a issue here: "
-                             "https://github.com/datascienceinc/Skater/issues"
-                             .format(type(i))))
+            raise(ValueError("Unrecongized index type: {}. This should not happen".format(type(i))))
 
 
     def __getrows__(self, idx):
