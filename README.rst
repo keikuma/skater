@@ -1,3 +1,6 @@
+# Please Note: *** The project is currently in maintenance mode *** 
+## this repo will move to [Oracle Github](https://github.com/oracle)
+
 .. raw:: html
 
     <div align="center">
