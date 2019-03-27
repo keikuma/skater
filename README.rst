@@ -3,8 +3,8 @@
 Please Note: *** The project is currently in maintenance mode ***
 =================================================================
 
-This repo will move to [Oracle Github](https://github.com/oracle)
-=================================================================
+This repo will move to Oracle Github
+====================================
 
 
 
