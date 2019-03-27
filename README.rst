@@ -1,7 +1,8 @@
-# Please Note: *** The project is currently in maintenance mode *** 
-## this repo will move to [Oracle Github](https://github.com/oracle)
-
 .. raw:: html
+
+<h1> Please Note: *** The project is currently in maintenance mode *** </h1>
+<h4> this repo will move to [Oracle Github](https://github.com/oracle)</h4>
+
 
     <div align="center">
     <img src ="https://image.ibb.co/fS9yRz/another_logo.png" height="223" width="240"/>
