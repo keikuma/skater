@@ -8,10 +8,8 @@ This repo will move to [Oracle Github](https://github.com/oracle)
 
 
 
-    <div align="center">
-    <img src ="https://image.ibb.co/fS9yRz/another_logo.png" height="223" width="240"/>
-    </a>
-    </div>
+
+
 
 Skater
 =======
