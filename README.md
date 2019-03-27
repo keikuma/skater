@@ -1,7 +1,3 @@
-# Please Note: ***The project is currently in maintenance mode ***
-
-## This repo will move to Oracle Github
-
 # Skater
 
 Skater is a unified framework to enable Model Interpretation for all forms of model to help one build an Interpretable
