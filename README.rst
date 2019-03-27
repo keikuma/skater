@@ -1,7 +1,11 @@
 .. raw:: html
 
-<h1> Please Note: *** The project is currently in maintenance mode *** </h1>
-<h4> this repo will move to [Oracle Github](https://github.com/oracle)</h4>
+Please Note: *** The project is currently in maintenance mode ***
+=================================================================
+
+This repo will move to [Oracle Github](https://github.com/oracle)
+=================================================================
+
 
 
     <div align="center">
