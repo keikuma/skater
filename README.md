@@ -46,7 +46,7 @@ To get the latest changes try cloning the repo and use the below mentioned comma
 1. If repo is cloned:
     `python skater/tests/all_tests.py`
 2. If pip installed:
-    `python -c "from skater.tests.all_tests import run_tests; run_tests()"``
+    `python -c "from skater.tests.all_tests import run_tests; run_tests()"`
 
 
 ## Usage and Examples
