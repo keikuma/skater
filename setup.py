@@ -79,7 +79,7 @@ def setup_package():
             'scikit-learn>=0.19',
             'scikit-image==0.14',
             'pandas>=0.22.0',
-            'ds-lime>=0.1.1.21',
+            'lime>=0.1.1.21',
             'requests',
             'multiprocess',
             'dill>=0.2.6',
