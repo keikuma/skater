@@ -179,7 +179,7 @@ class FeatureImportance(BaseGlobalInterpretation):
 
     def plot_feature_importance(self, modelinstance, filter_classes=None, ascending=True, ax=None, progressbar=True,
                                 n_jobs=-1, n_samples=5000, method='prediction-variance', scorer_type='default',
-                                use_scaling=False):
+                                use_scaling=False, n_features=1000, importance_threshold=0.0):
 
         """Computes feature importance of all features related to a model instance,
         then plots the results. Supports classification, multi-class classification, and regression.
@@ -220,6 +220,14 @@ class FeatureImportance(BaseGlobalInterpretation):
         use_scaling: bool
             Whether to weight the importance values by the strength of the perturbations.
             Generally doesn't effect results unless n_samples is very small.
+        n_features: int
+            Number of features to display on feature graph. Defaults to a "large" int.
+        importance_threshold: float
+            Minimum threshold importance of a feature to appear on graph. Note that if both
+            n_features and importance_threshold are supplied then the more restrictive of the
+             two is used.
+
+
 
 
         Returns
@@ -264,7 +272,9 @@ class FeatureImportance(BaseGlobalInterpretation):
 
         colors = cycle(COLORS)
         color = next(colors)
-        importances.sort_values(ascending=ascending).plot(kind='barh', ax=ax, color=color)
+        importances[importances > importance_threshold].nlargest(n_features).sort_values(
+            ascending=ascending).plot(
+            kind='barh', ax=ax, color=color)
         return f, ax
 
 
