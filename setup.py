@@ -77,7 +77,7 @@ def setup_package():
         include_package_data=True,
         install_requires=[
             'scikit-learn>=0.19',
-            'scikit-image==0.14',
+            'scikit-image>=0.14',
             'pandas>=0.22.0',
             'lime>=0.1.1.21',
             'requests',

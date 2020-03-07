@@ -43,7 +43,7 @@ class DeepInterpreter(object):
     Parameters
     ----------
     graph : tensorflow.Graph instance
-    session : tensorflow.Session to execute the graph(default session: tf.get_default_session())
+    session : tensorflow.Session to execute the graph(default session: tf.compat.v1.get_default_session)
     log_level : int (default: _WARNING)
         The log_level could be adjusted to other values as well. Check here `./skater/util/logger.py`
 
@@ -56,7 +56,7 @@ class DeepInterpreter(object):
     """
     __name__ = "DeepInterpreter"
 
-    def __init__(self, graph=None, session=tf.get_default_session(), log_level=_WARNING):
+    def __init__(self, graph=None, session=tf.compat.v1.get_default_session, log_level=_WARNING):
         self.logger = build_logger(log_level, __name__)
         self.relevance_type = None
         self.use_case_str = None

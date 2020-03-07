@@ -5,7 +5,7 @@ import pandas as pd
 from numpy.testing import assert_array_equal
 
 from skater.data import DataManager
-from arg_parser import arg_parse, create_parser
+from .arg_parser import arg_parse, create_parser
 
 
 class TestData(unittest.TestCase):

@@ -1,6 +1,7 @@
 import unittest
 
 import keras
+import tensorflow as tf
 from keras.datasets import mnist
 from keras.models import Sequential, Model, load_model, model_from_yaml
 from keras import backend as K
@@ -79,7 +80,7 @@ class TestDNNI(unittest.TestCase):
 
     def test_deep_interpreter_cnn(self):
         K.set_learning_phase(0)
-        with DeepInterpreter(session=K.get_session()) as di:
+        with DeepInterpreter(session=tf.compat.v1.keras.backend.get_session()) as di:
             # 1. Load the persisted model
             # 2. Retrieve the input tensor from the loaded model
 
