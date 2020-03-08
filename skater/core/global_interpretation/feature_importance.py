@@ -179,7 +179,7 @@ class FeatureImportance(BaseGlobalInterpretation):
 
     def plot_feature_importance(self, modelinstance, filter_classes=None, ascending=True, ax=None, progressbar=True,
                                 n_jobs=-1, n_samples=5000, method='prediction-variance', scorer_type='default',
-                                use_scaling=False, n_features=1000, importance_threshold=0.0):
+                                use_scaling=False, n_features=1000, importance_threshold=0.0, figure_size=(20, 8)):
 
         """Computes feature importance of all features related to a model instance,
         then plots the results. Supports classification, multi-class classification, and regression.
@@ -266,7 +266,7 @@ class FeatureImportance(BaseGlobalInterpretation):
                                               use_scaling=use_scaling)
 
         if ax is None:
-            f, ax = pyplot.subplots(1)
+            f, ax = pyplot.subplots(1, figsize=figure_size)
         else:
             f = ax.figure
 
