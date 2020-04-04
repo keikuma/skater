@@ -414,7 +414,7 @@ class PartialDependence(BaseGlobalInterpretation):
                                 grid=None, grid_resolution=30, grid_range=None,
                                 n_jobs=-1, sample=True, sampling_strategy='random-choice',
                                 n_samples=1000, bin_count=50, with_variance=False,
-                                figsize=(16, 10), progressbar=True, variance_type='estimate'):
+                                figsize=(16, 10), progressbar=True, variance_type='estimate', plot_title=None):
         """
         Computes partial_dependence of a set of variables. Essentially approximates
         the partial partial_dependence of the predict_fn with respect to the variables
@@ -536,7 +536,7 @@ class PartialDependence(BaseGlobalInterpretation):
                                                       variance_type=variance_type)
 
             self.interpreter.logger.info("done computing pd, now plotting ...")
-            ax = self._plot_pdp_from_df(pd_df, metadata, with_variance=with_variance, figsize=figsize)
+            ax = self._plot_pdp_from_df(pd_df, metadata, with_variance=with_variance, figsize=figsize, plot_title=plot_title)
             return ax
         else:
             ax_list = []
@@ -552,7 +552,7 @@ class PartialDependence(BaseGlobalInterpretation):
                                                           variance_type=variance_type)
 
                 self.interpreter.logger.info("done computing pd, now plotting ...")
-                ax = self._plot_pdp_from_df(pd_df, metadata, with_variance=with_variance, figsize=figsize)
+                ax = self._plot_pdp_from_df(pd_df, metadata, with_variance=with_variance, figsize=figsize, plot_title=plot_title)
                 ax_list.append(ax)
             return ax_list
 
