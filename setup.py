@@ -1,4 +1,5 @@
 # Reference: http://python-packaging.readthedocs.io/en/latest/dependencies.html
+import distutils.command.install as orig
 from setuptools import setup, find_packages
 from setuptools.command.install import install
 import subprocess
@@ -37,7 +38,7 @@ class InvokingShScript(install):
             shell_script_path = os.path.join(dir_path, 'setup.sh')
 
             subprocess.check_output(['bash', shell_script_path, self.ostype])
-        install.do_egg_install(self)
+        orig.install.run(self)
 
 
 @contextlib.contextmanager
