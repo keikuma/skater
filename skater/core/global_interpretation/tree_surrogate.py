@@ -157,7 +157,7 @@ class TreeSurrogate(object):
                                          max_features=max_features, random_state=seed,
                                          max_leaf_nodes=max_leaf_nodes,
                                          min_impurity_decrease=min_impurity_decrease,
-                                         class_weight=class_weight, presort=presort)
+                                         class_weight=class_weight)
         elif self.__model_type == 'regressor':
             est = DecisionTreeRegressor(splitter=self.splitter, max_depth=None,
                                         min_samples_split=min_samples_split,
@@ -165,7 +165,7 @@ class TreeSurrogate(object):
                                         min_weight_fraction_leaf=min_weight_fraction_leaf,
                                         max_features=max_features,
                                         random_state=seed, max_leaf_nodes=max_leaf_nodes,
-                                        min_impurity_split=min_impurity_split, presort=presort)
+                                        min_impurity_split=min_impurity_split)
         else:
             raise exceptions.ModelError("Model type not supported. Supported options types{'classifier', 'regressor'}")
         self.__model = est

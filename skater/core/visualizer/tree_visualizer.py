@@ -1,8 +1,7 @@
-from sklearn.externals.six import StringIO
 from sklearn.tree import export_graphviz
 import numpy as np
 import pydotplus
-
+from six import StringIO
 from skater.util import exceptions
 try:
     import matplotlib.pyplot as plt
