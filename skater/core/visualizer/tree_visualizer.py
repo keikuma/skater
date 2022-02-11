@@ -1,4 +1,3 @@
-from sklearn.externals.six import StringIO
 from sklearn.tree import export_graphviz
 import numpy as np
 import pydotplus
@@ -47,6 +46,10 @@ def _get_colors(num_classes, random_state=1):
 
 def _generate_graph(est, est_type='classifier', classes=None, features=None,
                     enable_node_id=True, coverage=True):
+    import six
+    import sys
+    sys.modules['sklearn.externals.six'] = six
+    from sklearn.externals.six import StringIO
     dot_data = StringIO()
     # class names are needed only for "Classification" for "Regression" it is set to None
     c_n = classes if est_type == 'classifier' else None
