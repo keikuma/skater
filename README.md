@@ -7,7 +7,7 @@ and locally(inference about an individual prediction).
 
 The project was started as a research idea to find ways to enable better interpretability(preferably human interpretability) to predictive "black boxes" both for researchers and practioners. The project is still in beta phase.
 
-## Install Skater
+## Installation
 
 pip
 ~~~~
@@ -52,3 +52,19 @@ To get the latest changes try cloning the repo and use the below mentioned comma
 ## Usage and Examples
 
 See `examples` folder for usage examples.
+
+
+## Contributing
+
+This project welcomes contributions from the community. Before submitting a pull request, please [review our contribution guide](./CONTRIBUTING.md)
+
+## Security
+
+Please consult the [security guide](./SECURITY.md) for our responsible security vulnerability disclosure process
+
+## License
+
+Copyright (c) 2018, 2023 Oracle and/or its affiliates.
+
+Released under the Universal Permissive License v1.0 as shown at
+<https://oss.oracle.com/licenses/upl/>.
