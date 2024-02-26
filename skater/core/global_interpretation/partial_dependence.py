@@ -513,7 +513,7 @@ class PartialDependence(BaseGlobalInterpretation):
             global mpl_axes
             global cm
             global tick_formatter
-            from matplotlib.axes._subplots import Axes as mpl_axes
+            from matplotlib.axes import Axes as mpl_axes
             from mpl_toolkits.mplot3d import Axes3D
             from matplotlib import pyplot, cm
             from ...util.plotting import tick_formatter
