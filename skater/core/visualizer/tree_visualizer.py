@@ -67,22 +67,28 @@ def _set_node_properites(estimator, estimator_type, graph_instance, color_names,
     for node in nodes:
         if node.get_name() not in ('node', 'edge'):
             if estimator_type == 'classifier':
-                value = values[int(node.get_name())][0]
-                # 1. Color only the leaf nodes, where one class is dominant or if it is a leaf node
-                # 2. For mixed population or otherwise set the default color
-                if max(value) == sum(value) or thresholds[int(node.get_name())] == TREE_UNDEFINED or \
-                        left_node[int(node.get_name())] and right_node[int(node.get_name())] == TREE_LEAF:
-                    node.set_fillcolor(color_names[np.argmax(value)])
-                else:
+                try:
+                    value = values[int(node.get_name())][0]
+                    # 1. Color only the leaf nodes, where one class is dominant or if it is a leaf node
+                    # 2. For mixed population or otherwise set the default color
+                    if max(value) == sum(value) or thresholds[int(node.get_name())] == TREE_UNDEFINED or \
+                            left_node[int(node.get_name())] and right_node[int(node.get_name())] == TREE_LEAF:
+                        node.set_fillcolor(color_names[np.argmax(value)])
+                    else:
+                        node.set_fillcolor(default_color)
+                except ValueError:
                     node.set_fillcolor(default_color)
             else:
                 # if the estimator type is a "regressor", then the intensity of the color is defined by the
                 # population coverage for a particular value
-                percent = estimator.tree_.n_node_samples[int(node.get_name())] / float(estimator.tree_.n_node_samples[0])
-                rgba = plt.cm.get_cmap(color_names)(percent)
-                hex_code = rgb2hex(rgba)
-                node.set_fillcolor(hex_code)
-                graph_instance.set_colorscheme(color_names)
+                try:
+                    percent = estimator.tree_.n_node_samples[int(node.get_name())] / float(estimator.tree_.n_node_samples[0])
+                    rgba = plt.cm.get_cmap(color_names)(percent)
+                    hex_code = rgb2hex(rgba)
+                    node.set_fillcolor(hex_code)
+                    graph_instance.set_colorscheme(color_names)
+                except ValueError:
+                    pass
     return graph_instance
 
 
